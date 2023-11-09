@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    align-items: center;
+    
+}
+.img-cart{
+    margin: 5px;
+    width: 35px;
+    height: 32px;
+}
+
+span{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+
+}
