@@ -9,7 +9,6 @@ export const NavBar = () => {
             <h1 className='title-nav'>ARROW</h1>
         </div>
         <div>
-            <button className='btn-nav'>CONJUNTOS</button>
             <button className='btn-nav'>PANTALONES</button>
             <button className='btn-nav'>BUZOS</button>
             <button className='btn-nav'>REMERAS</button>
