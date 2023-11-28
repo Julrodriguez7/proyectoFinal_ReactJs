@@ -1,0 +1,47 @@
+.counter{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-count{
+    color: white;
+    background: none;
+    border-style: none;
+    font-size: large;
+}
+
+.count{
+    font-size: large;
+}
+
+.btn-add-cart{
+    margin: 5px;
+    color: white;
+    background: none;
+    border-style: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1.5px  0px 0px black,
+    0px  1.5px 0px black,
+   -1.5px  0px 0px black,
+    0px -1.5px 0px black;
+}
+
+.btn-add-cart:hover{
+    color: black;
+    transition: linear .5s;
+    text-shadow: 1.5px  0px 0px white,
+    0px  1.5px 0px white,
+   -1.5px  0px 0px white,
+    0px -1.5px 0px white;
+}

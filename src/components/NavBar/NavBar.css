@@ -10,6 +10,7 @@
     border-width: 2px;
     
 }
+
 .title-nav{
     font-size: 30px;
     text-shadow: 1.5px  0px 0px white,
@@ -17,6 +18,11 @@
                  -1.5px  0px 0px white,
                  0px -1.5px 0px white;
 }
+
+.link-title:visited{
+    color: black;
+}
+
 .btn-nav{
     margin: 10px;
     color: white;
