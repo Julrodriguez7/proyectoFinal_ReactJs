@@ -35,6 +35,7 @@
     0px  1.5px 0px black,
    -1.5px  0px 0px black,
     0px -1.5px 0px black;
+    position: relative;
 }
 
 .btn-nav:hover {
@@ -44,4 +45,57 @@
     0px  1.5px 0px white,
    -1.5px  0px 0px white,
     0px -1.5px 0px white;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+@media (max-width: 778px) {
+    .nav-items{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgb(0, 102, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: .5s ease all;
+    }
+    .btn-nav{
+        margin: 20px;
+        font-size: larger;
+    }
+    .nav-items.open{
+        transform: translateX(0) !important;
+    }
+    .nav-toggle{
+        display: flex !important;
+        flex-direction: column;
+    }
+    .nav-toggle span{
+        width: 30px;
+        height: 6px;
+        margin-bottom: 5px;
+        border-radius: 3px;
+        background-color: black;
+        border: solid 2px white;
+        transform-origin: 5px 0px;
+        transition: all 0.2s linear;
+    }
+
+    /* Para cambiar de menú hamburguesa a X */
+
+    .nav-toggle.open > span {
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+    .nav-toggle.open > span:nth-child(2){
+        display: none;
+    }
+    .nav-toggle.open > span:nth-child(3){
+        transform: rotate(-45deg) translate(-5px, 1px);
+    }
 }
