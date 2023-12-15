@@ -55,3 +55,30 @@
     display: flex;
     justify-content: center;
 }
+
+.btn-buy-count{
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1.5px  0px 0px black,
+    0px  1.5px 0px black,
+   -1.5px  0px 0px black,
+    0px -1.5px 0px black;
+}
+
+.btn-buy-count:hover{
+    color: black;
+    transition: linear .5s;
+    text-shadow: 1.5px  0px 0px white,
+    0px  1.5px 0px white,
+   -1.5px  0px 0px white,
+    0px -1.5px 0px white;
+}
+
+@media (max-width: 778px) {
+    .container-detail{
+        flex-direction: column;
+    }
+}

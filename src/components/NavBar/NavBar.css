@@ -64,6 +64,7 @@
         align-items: center;
         transform: translateX(-100%);
         transition: .5s ease all;
+        z-index: 1;
     }
     .btn-nav{
         margin: 20px;
@@ -75,6 +76,7 @@
     .nav-toggle{
         display: flex !important;
         flex-direction: column;
+        cursor: pointer;
     }
     .nav-toggle span{
         width: 30px;
