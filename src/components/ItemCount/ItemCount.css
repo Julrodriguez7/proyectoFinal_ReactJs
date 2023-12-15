@@ -17,6 +17,7 @@
     background: none;
     border-style: none;
     font-size: large;
+    cursor: pointer;
 }
 
 .count{

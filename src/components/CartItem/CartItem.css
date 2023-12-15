@@ -1,0 +1,28 @@
+.title{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    margin: 10px;
+    border-bottom: solid 1.5px rgb(194, 194, 194);
+}
+
+.section-producto{
+    display: flex;
+}
+
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1.5px rgb(194, 194, 194);
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.title-cart{
+    font-size: x-large;
+}
+
+.img-item-cart{
+    width: 20vh;
+    height: 20vh;
+}
