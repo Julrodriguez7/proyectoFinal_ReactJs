@@ -5,6 +5,7 @@ import { CheckoutForm } from "../CheckoutForm/CheckoutForm";
 import { Timestamp, addDoc, collection, documentId, getDocs, query, where, writeBatch } from "@firebase/firestore";
 import { db } from "../../services/firebase/firebaseConfig";
 import './Checkout.css'
+import { Link } from "react-router-dom";
 
 
 export const Checkout = () => {
@@ -94,47 +95,52 @@ export const Checkout = () => {
     }
 
     return (
-        <div className="container-checkout">
-            <div>
-                <div className="title-form-buy">
-                    <h2>DATOS DE CONTACTO</h2>
+        <div>
+            <div className='container-btn-back'>
+            <Link to={-1} className='btn-back'> ◀ VOLVER</Link>
+            </div>            
+            <div className="container-checkout">
+                <div>
+                    <div className="title-form-buy">
+                        <h2>DATOS DE CONTACTO</h2>
+                    </div>
+
+                    <CheckoutForm onConfirm={createOrder} />
                 </div>
 
-                <CheckoutForm onConfirm={createOrder} />
-            </div>
-
-            <div className="detail-buy">
-                <div className="title-detail-buy">
-                    <h2>MI COMPRA</h2>
-                </div>
-                <div className="container-detail-buy">
-                    <div className="main-detail-buy">
-                        {
-                            cart.map((item) => {
-                                return (
-                                    <div key={item.id} className="item-buy">
-                                        <div>
-                                            <div className="item-detail-buy">
-                                                <img src={item.img} alt={item.name} className="img-checkout" />
-                                                <div>
-                                                    <h3>{item.name}</h3>
-                                                    <p>X {item.quantity}</p>
-                                                    <p className="price-unit">PRECIO UNIT.: $ {item.price}</p>
+                <div className="detail-buy">
+                    <div className="title-detail-buy">
+                        <h2>MI COMPRA</h2>
+                    </div>
+                    <div className="container-detail-buy">
+                        <div className="main-detail-buy">
+                            {
+                                cart.map((item) => {
+                                    return (
+                                        <div key={item.id} className="item-buy">
+                                            <div>
+                                                <div className="item-detail-buy">
+                                                    <img src={item.img} alt={item.name} className="img-checkout" />
+                                                    <div>
+                                                        <h3>{item.name}</h3>
+                                                        <p>X {item.quantity}</p>
+                                                        <p className="price-unit">PRECIO UNIT.: $ {item.price}</p>
+                                                    </div>
+                                                </div>
+                                                <div className="subtotal-buy">
+                                                    <p>SUBTOTAL: $ {item.quantity * item.price}</p>
                                                 </div>
                                             </div>
-                                            <div className="subtotal-buy">
-                                                <p>SUBTOTAL: $ {item.quantity * item.price}</p>
-                                            </div>
                                         </div>
-                                    </div>
-                                )
-                            })
+                                    )
+                                })
 
-                        }
-                    </div>
-                    <div className="footer-detail-buy">
-                        <p>TOTAL</p>
-                        <span>$ {totalPrice()}</span>
+                            }
+                        </div>
+                        <div className="footer-detail-buy">
+                            <p>TOTAL</p>
+                            <span>$ {totalPrice()}</span>
+                        </div>
                     </div>
                 </div>
             </div>
