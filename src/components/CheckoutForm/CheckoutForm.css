@@ -45,3 +45,9 @@
     0px -1.5px 0px white;
     transform: scale(1.05);
 }
+
+@media (max-width: 486px){
+    .form{
+        width: 35vh;
+    }
+}

@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 1rem;
     min-height: 80vh;
 }
 
@@ -84,10 +83,15 @@
     font-weight: bolder;
 }
 
+.container-btn-back{
+    margin: 10px 0px 0px 20px;
+}
+
 @media (max-width: 778px) {
     .container-checkout{
         flex-direction: column-reverse;
         align-items: center;
+        justify-content: space-around;
     }
 
     .order-id{
