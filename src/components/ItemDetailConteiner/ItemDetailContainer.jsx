@@ -3,13 +3,17 @@ import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../../services/firebase/firebaseConfig'
+import { Loader } from '../Loader/Loader'
 
 export const ItemDetailContainer = () => {
-    const[product, setProduct] = useState(null);
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const { itemId } = useParams();
 
-    useEffect( () => {
+    useEffect(() => {
+
+        setLoading(true)
 
         const docRef = doc(db, 'products', itemId)
 
@@ -22,9 +26,18 @@ export const ItemDetailContainer = () => {
             .catch(error => {
                 console.error(error)
             })
+            .finally(() => {
+                setTimeout(() => {
+                    setLoading(false)
+                }, 1000);
+            })
 
     }, [itemId])
-    
+
+    if (loading) {
+        return <Loader />
+    }
+
     return (
         <div>
             <ItemDetail {...product} />

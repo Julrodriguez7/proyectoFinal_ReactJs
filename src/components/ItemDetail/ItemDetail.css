@@ -16,7 +16,7 @@
 .section-container{
     display: flex;
     justify-content: space-around;
-    margin: 5px 5px 0px 5px;
+    margin: 5px 5px 25px 5px;
     background-color: rgb(101, 151, 243);
     padding: 30px;
     border: solid 2px;
@@ -25,6 +25,7 @@
 .img-detail{
     width: 400px;
     height: 500px;
+    border: solid 1px;
 }
 
 .title-detail{
