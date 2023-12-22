@@ -1,12 +1,69 @@
 .container-footer{
     margin: 5px;
-    height: 80px;
     background-color: rgb(0, 102, 255);
     border: solid;
     border-color: black;
     border-width: 2px;
 }
 
+.container-sections-footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+}
+
+.img-mercpago{
+    width: 130px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.img-mercpago img{
+    width: 130px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.container-img-pay{
+    margin: -10px;
+}
+
+.container-img-pay img{
+    width: 50px;
+    height: 30px;
+}
+
+.container-img-red{
+    margin-top: 20px;
+}
+
+.img-red{
+    width: 43px;
+    height: 40px;
+    padding: 5px;
+}
+
+.container-ub{
+    display: flex;
+    margin-top: 20px;
+}
+
+.container-ub div{
+    margin-right: 40px;
+    padding-bottom: 10px;
+}
+
 .copy{
+    margin-top: 15px;
     text-align: center;
+}
+
+@media (max-width: 778px) {
+    .container-sections-footer{
+        flex-direction: column;
+    }
+    .container-ub div{
+        margin-right: 20px;
+    }
+    
 }

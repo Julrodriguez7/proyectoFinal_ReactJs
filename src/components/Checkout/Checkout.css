@@ -1,0 +1,98 @@
+.container-checkout{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    min-height: 80vh;
+}
+
+.title-form-buy{
+    text-align: center;
+}
+
+.main-detail-buy{
+    border-bottom: solid 1px grey;
+    margin: 20px;
+}
+
+.item-buy{
+    border-top: solid 1px grey;
+    padding: 5px;
+}
+
+.item-detail-buy{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 5px;
+}
+
+.title-detail-buy{
+    text-align: center;
+}
+
+.img-checkout{
+    width: 12vh;
+}
+
+.price-unit{
+    font-size: 15px;
+}
+
+.subtotal-buy{
+    text-align: end;
+    border-top: solid 1px rgb(194, 194, 194);
+    padding-top: 5px;
+}
+
+.footer-detail-buy{
+    display: flex;
+    justify-content: space-between;
+    font-size: x-large;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+.container-order{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-order-id{
+    background-color: rgb(101, 151, 243);
+    padding: 20px;
+    border: solid 2px;
+}
+
+.order-id{
+    padding: 10px;
+    font-size: x-large;
+    background-color: rgb(194, 194, 194);
+    border-radius: 10px;
+}
+
+.container-text-order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.text-3{
+    font-weight: bolder;
+}
+
+@media (max-width: 778px) {
+    .container-checkout{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .order-id{
+        font-size: large;
+    }
+}
+
+

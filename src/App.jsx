@@ -6,6 +6,7 @@ import { NavBar } from "./components/NavBar/NavBar";
 import { CartProvider } from './context/CartContext';
 import { Cart } from './components/Cart/Cart';
 import { Footer } from './components/Footer/Footer';
+import { Checkout } from './components/Checkout/Checkout';
 
 function App(){
 
@@ -19,6 +20,7 @@ function App(){
                         <Route path='/category/:categoryId' element={<ItemListContainer greeting={"INDUMENTARIA DEPORTIVA"} />} />
                         <Route path='/item/:itemId' element={<ItemDetailContainer />} />
                         <Route path='/cart' element={<Cart />} />
+                        <Route path='/checkout' element={<Checkout />} />
                         <Route path='*' element={<h1>404 PAGE NOT FOUND</h1>} />
                     </Routes>
                     <Footer />
