@@ -39,7 +39,11 @@
 }
 
 .price-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(194, 194, 194);
+    border: solid 1px;
     border-radius: 10px;
     margin-top: 25px;
     padding: 10px;
@@ -51,6 +55,7 @@
 
 .description-detail{
     background-color: rgb(194, 194, 194);
+    border: solid 1px;
     border-radius: 10px;
     margin-top: 20px;
     padding: 10px;
@@ -85,6 +90,7 @@
 
 .shipment-container{
     background-color: rgb(194, 194, 194);
+    border: solid 1px;
     border-radius: 10px;
     margin-top: 25px;
     padding: 10px;

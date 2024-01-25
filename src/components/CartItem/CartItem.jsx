@@ -21,7 +21,7 @@ export const CartItem = ({ id, name, price, img, quantity }) => {
 
             <div className='section-subtotal'>
                 <div>
-                    <p className='price-cart'>SUBTOTAL: $ {price * quantity}</p>
+                    <p className='price-cart'>SUBTOTAL: $ {new Intl.NumberFormat().format(price * quantity)}</p>
                 </div>
 
                 <div>
