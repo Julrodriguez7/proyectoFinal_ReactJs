@@ -83,10 +83,10 @@ export const Checkout = () => {
         return (
             <div className="container-order">
                 <div className="container-order-id">
-                    <p className="order-id">El id de su orden es: {orderId}</p>
+                    <p className="order-id">El id de su orden es: <span>{orderId}</span></p>
                     <div className="container-text-order">
-                        <p>Por favor guarde el codigo de la orden</p>
-                        <p>A la brevedad nos contactaremos por correo</p>
+                        <p>Por favor guarde el código de la orden.</p>
+                        <p>A la brevedad nos contactaremos por correo.</p>
                         <p className="text-3">¡Muchas gracias por generar su compra!</p>
                     </div>
                 </div>
@@ -124,11 +124,11 @@ export const Checkout = () => {
                                                     <div>
                                                         <h3>{item.name}</h3>
                                                         <p>X {item.quantity}</p>
-                                                        <p className="price-unit">PRECIO UNIT.: $ {item.price}</p>
+                                                        <p className="price-unit">PRECIO UNIT.: $ {new Intl.NumberFormat().format(item.price)}</p>
                                                     </div>
                                                 </div>
                                                 <div className="subtotal-buy">
-                                                    <p>SUBTOTAL: $ {item.quantity * item.price}</p>
+                                                    <p>SUBTOTAL: $ {new Intl.NumberFormat().format(item.quantity * item.price)}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -139,7 +139,7 @@ export const Checkout = () => {
                         </div>
                         <div className="footer-detail-buy">
                             <p>TOTAL</p>
-                            <span>$ {totalPrice()}</span>
+                            <span>$ {new Intl.NumberFormat().format(totalPrice())}</span>
                         </div>
                     </div>
                 </div>

@@ -40,7 +40,7 @@ export const ItemDetail = ({ id, name, price, category, img, stock, description 
                     <h2 className='title-detail'>{name}</h2>
 
                     <div className='price-detail'>
-                        <h3>$ {price}</h3>
+                        <h3>$ {new Intl.NumberFormat().format(price)}</h3>
                         <p>Stock disponible: {stock}</p>
                     </div>
 

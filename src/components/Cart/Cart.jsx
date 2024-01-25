@@ -29,7 +29,7 @@ export const Cart = () => {
                 </div>
 
                 <div className='total-cart'>
-                    <p>Total: $ {totalPrice()}</p>
+                    <p>Total: $ {new Intl.NumberFormat().format(totalPrice())}</p>
                 </div>
 
                 <div className='buttons-cart'>

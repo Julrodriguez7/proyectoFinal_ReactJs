@@ -68,7 +68,12 @@
     padding: 10px;
     font-size: x-large;
     background-color: rgb(194, 194, 194);
+    border: solid 1px;
     border-radius: 10px;
+}
+
+.order-id span{
+    text-decoration: underline;
 }
 
 .container-text-order{
@@ -92,6 +97,10 @@
         flex-direction: column-reverse;
         align-items: center;
         justify-content: space-around;
+    }
+
+    .container-order-id{
+        margin: 5px;
     }
 
     .order-id{
